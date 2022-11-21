@@ -614,7 +614,7 @@ align-items: center;
 
 .footer-form-email {
     margin: 0;
-    padding: 0;
+    padding: 16px 12px;
     
     min-width: 358px;
     min-height: 50px;
@@ -878,6 +878,9 @@ align-items: center;
 }
 
 .form-label {
+    display: block;
+    margin-bottom: 4px;
+
     font-family: var(--general-font);
     font-size: 12px;
     line-height: 1.17;
@@ -888,10 +891,14 @@ align-items: center;
 .form-field {
     position: relative;
     display: block;
+}
+
+.form-field:not(:last-child) {
     margin-bottom: 10px;
 }
 
 .form-input {
+    padding-left: 42px;
     background-color: transparent;
     width: 448px;
     height: 40px;
@@ -912,14 +919,14 @@ align-items: center;
 
 .form-icon {
     position: absolute;
-    display: inline-block;
     top: 11px;
     left: 12px;
 }
 
-.form-input:hover .form-icon,
-.form-input:focus .form-icon {
-    fill: #ECECEC;
+.form-field:hover .form-icon,
+.form-field:focus .form-icon {
+    fill: #2196F3;
+    transition: var(--animation);
 }
 
 .form-btn {
@@ -964,6 +971,7 @@ align-items: center;
 .form-message {
     background-color: transparent;
     width: 448px;
+    padding: 16px 12px;
 
     outline: transparent;
     border: 1px solid rgba(33, 33, 33, 0.2);
@@ -973,8 +981,23 @@ align-items: center;
 
     transition: var(--animation);
     resize: none;
+
+    font-family: var(--general-font);
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+
+    color: rgba(117, 117, 117, 0.5);
 }
 
+.checkbox-licence {
+    display: block;
+    margin: 0;
+    padding: 0;
+    padding-top: 10px;
+
+    text-align: center;
+}
 
 .form-checkbox {
     appearance: none;
@@ -992,6 +1015,9 @@ align-items: center;
     background-position: center;
 
     transition: var(--animation);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .form-checkbox:checked {
